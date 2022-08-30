@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace PrestamosBD.Data.Entidades
 {
-    public class Usuario
+    public class Usuario : EntityBase
     {
         public string Id { get; set; }
-        public string Name { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
     }
 }
