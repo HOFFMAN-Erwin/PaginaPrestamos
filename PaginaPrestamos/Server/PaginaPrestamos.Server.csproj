@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\PrestamosBD\PrestamosBD.csproj" />
     <ProjectReference Include="..\Client\PaginaPrestamos.Client.csproj" />
     <ProjectReference Include="..\Shared\PaginaPrestamos.Shared.csproj" />
   </ItemGroup>

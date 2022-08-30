@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using PrestamosBD.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+var conn = builder.Configuration.GetConnectionString("conn");
+builder.Services.AddDbContext<BD>(opciones => opciones.UseSqlServer(conn));
 
 var app = builder.Build();
 

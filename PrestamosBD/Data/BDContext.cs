@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace PrestamosBD.Data
 {
-    public class BDContext : DbContext
+    public class BD : DbContext
     {
-        public BDContext(DbContextOptions options) : base(options)
+        public BD(DbContextOptions options) : base(options)
         {
         }
         public DbSet<Usuario> TablaUsuario { get; set; }
